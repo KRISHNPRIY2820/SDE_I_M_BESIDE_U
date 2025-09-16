@@ -8,6 +8,13 @@
 **README and User Guide**
 
 ---
+## 🌐 Live Demo
+
+You can try the deployed **Streamlit App** here:  
+👉 [AI Study Planner Agent - Streamlit Deployment](https://multi-agent-rag-ui-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)
+
+---
+
 
 ## 📌 Introduction
 The **AI Study Planner Agent** is a lightweight prototype that automates scheduling and execution of study tasks. It demonstrates:
@@ -85,6 +92,8 @@ streamlit run multi_agent_ui.py
 streamlit run multi_agent_rag_ui.py
 streamlit run multi_agent_rag_ui_corrected.py
 ```
+Or use the **hosted version**:
+👉 [Live Streamlit App](https://multi-agent-rag-ui-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)
 
 ---
 
