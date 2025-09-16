@@ -8,10 +8,15 @@
 **README and User Guide**
 
 ---
+
 ## 🌐 Live Demo
 
-You can try the deployed **Streamlit App** here:  
-👉 [AI Study Planner Agent - Streamlit Deployment](https://multi-agent-rag-ui-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)
+You can try the deployed **Streamlit Apps** here:  
+
+-👉 [Multi-Agent RAG (Full Version)](https://multi-agent-rag-ui-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)  
+-👉 [Multi-Agent RAG (Simple Version)](https://multi-agent-rag-ui-simple-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)  
+-👉 [Single-Agent Version](https://single-agent-ui-sde-imbesideu-priyanshi-agrawal.streamlit.app/)  
+
 
 ---
 
@@ -92,8 +97,12 @@ streamlit run multi_agent_ui.py
 streamlit run multi_agent_rag_ui.py
 streamlit run multi_agent_rag_ui_corrected.py
 ```
-Or use the **hosted version**:
-👉 [Live Streamlit App](https://multi-agent-rag-ui-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)
+
+Or use the **hosted versions**:  
+
+-👉 [Multi-Agent RAG (Full Version)](https://multi-agent-rag-ui-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)  
+-👉 [Multi-Agent RAG (Simple Version)](https://multi-agent-rag-ui-simple-sde-imbesideyou-priyanshi-agrawal.streamlit.app/)  
+-👉 [Single-Agent Version](https://single-agent-ui-sde-imbesideu-priyanshi-agrawal.streamlit.app/)  
 
 ---
 
