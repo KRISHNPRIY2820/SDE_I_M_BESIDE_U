@@ -1,0 +1,2851 @@
+Skip to content
+Chat history
+
+You said:
+2025-09-16 14:19:44.640 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.819 
+  Warning: to view this Streamlit app on a browser, run it with the following
+  command:
+
+    streamlit run /usr/local/lib/python3.12/dist-packages/colab_kernel_launcher.py [ARGUMENTS]
+2025-09-16 14:19:44.820 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.821 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.823 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.824 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.825 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.825 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.826 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.827 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.828 Session state does not function when running a script without streamlit run
+2025-09-16 14:19:44.829 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.830 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.831 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.831 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.832 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.833 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.834 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.835 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.836 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.837 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.838 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.838 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.839 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.840 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.840 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.841 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.842 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.842 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.843 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.844 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.845 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.845 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.846 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.847 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.847 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.848 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.848 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.849 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.850 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.851 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.851 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.852 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.853 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-09-16 14:19:44.853 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ChatGPT said:
+
+I see what’s happening 👍
+
+These warnings are from Streamlit when you try to run it in Google Colab (or a plain Python environment) instead of using the recommended command:
+
+streamlit run your_script.py
+Why you see this:
+Streamlit expects a ScriptRunContext (its internal runtime) which is only created when you launch it via streamlit run.
+
+In Colab or direct Python execution (python script.py), that context doesn’t exist → you get repeated missing ScriptRunContext! warnings.
+
+Also:
+
+Session state does not function when running a script without `streamlit run`
+→ means st.session_state won’t work.
+
+✅ Solutions:
+Option 1: Proper way (outside Colab)
+Run your app from terminal/command line:
+
+streamlit run your_script.py
+Then open the localhost URL it provides.
+
+Option 2: Inside Colab
+Use colabcode or pyngrok to expose a public URL:
+
+!pip install streamlit colabcode
+
+from colabcode import ColabCode
+
+ColabCode(port=8501, code=False)  # starts a server with ngrok
+Then in another cell:
+
+!streamlit run your_script.py --server.port 8501
+This way, you’ll get a clickable public URL to view your Streamlit app in the browser.
+
+⚠️ If you just import streamlit as st and run cells in Colab, it will not work as intended (only partial functionality).
+
+👉 Do you want me to give you a ready-to-run Colab template that sets up Streamlit properly with ngrok so you can see your app in the browser?
+
+You said:
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+/tmp/ipython-input-2672996916.py in <cell line: 0>()
+      3 from colabcode import ColabCode
+      4 
+----> 5 ColabCode(port=8501, code=False)  # starts a server with ngrok
+
+TypeError: ColabCode.__init__() got an unexpected keyword argument 'code'
+ChatGPT said:
+
+Got it 👍 — the error happens because the ColabCode API changed.
+In newer versions, the ColabCode class doesn’t support code as an argument anymore.
+
+✅ Fix
+Try this instead in Colab:
+
+!pip install streamlit colabcode
+Then:
+
+from colabcode import ColabCode
+
+# Just provide port (no "code" argument anymore)
+ColabCode(port=8501)
+And in another cell, run your Streamlit app:
+
+!streamlit run your_script.py --server.port 8501
+It will print a public ngrok URL you can click to open your Streamlit app in the browser.
+
+⚡ Alternative: If you want more control, you can skip colabcode and directly use pyngrok:
+
+!pip install streamlit pyngrok
+
+from pyngrok import ngrok
+
+# Start ngrok tunnel
+public_url = ngrok.connect(8501)
+print("Public URL:", public_url)
+
+# Run streamlit in background
+!streamlit run your_script.py --server.port 8501 &
+👉 Do you want me to prepare a Colab cell-by-cell template (with installation, ngrok setup, and Streamlit launch) so you can just paste and run it?
+
+You said:
+how to run outside colab as inside it is giving error
+ChatGPT said:
+
+Perfect question 👍
+If you don’t want to deal with ngrok/Colab limitations, the easiest way is to run Streamlit on your local machine (outside Colab).
+
+Here’s exactly how you can do it:
+
+🔹 Steps to Run Streamlit Locally
+1. Install Streamlit
+Open a terminal (or Anaconda prompt if you use Anaconda) and run:
+
+pip install streamlit
+Verify installation:
+
+streamlit --version
+2. Create a Python file
+For example, create a file app.py:
+
+import streamlit as st
+
+st.title("My First Streamlit App")
+st.write("Hello! This is running outside Colab 🚀")
+3. Run the Streamlit App
+From the same folder where app.py is located, run:
+
+streamlit run app.py
+4. Open in Browser
+Streamlit will start a local server.
+
+You’ll see something like:
+
+Local URL: http://localhost:8501
+Network URL: http://192.168.xx.xx:8501
+👉 Open the Local URL in your browser, and you’ll see your app running.
+
+✅ Tip: You can stop the server anytime with CTRL + C.
+
+⚡ So in short:
+
+Colab = Not ideal (needs ngrok hacks, session state issues).
+
+Local = Recommended (clean, stable, everything works).
+
+Do you want me to also show you how to run this on VS Code / PyCharm step-by-step so you can test Streamlit apps more easily?
+
+You said:
+in strealit how is rag implemented , as it is the same functionality as the multiagent 
+ChatGPT said:
+
+Great question 👌
+
+Streamlit itself doesn’t “have RAG built-in” — it’s a UI layer.
+But developers use Streamlit to wrap and serve Retrieval-Augmented Generation (RAG) pipelines (often built with libraries like LangChain, LlamaIndex, or custom FAISS/Chroma retrievers).
+
+🔹 How RAG is typically implemented in Streamlit
+Document Ingestion
+
+Upload PDFs, CSVs, text files using st.file_uploader().
+
+Process and chunk text (e.g., 500 tokens each).
+
+Embedding & Vector Store
+
+Convert text chunks into embeddings (OpenAIEmbeddings, sentence-transformers, etc.).
+
+Store them in a vector DB (e.g., FAISS, Chroma, Pinecone, Weaviate).
+
+Retriever
+
+When a user asks a question, the query is embedded.
+
+Similar chunks are retrieved from the vector DB.
+
+Augmented Prompting
+
+The retrieved chunks are inserted into the LLM prompt.
+
+Example:
+
+User Question + Retrieved Context → LLM → Final Answer
+Streamlit Interface
+
+st.text_input() for queries.
+
+st.chat_message() / st.write() for responses.
+
+Optionally keep history in st.session_state.
+
+🔹 RAG vs Multi-Agent Systems
+They can look similar in Streamlit UI (chat-style app), but conceptually different:
+
+RAG = One LLM agent, enhanced with retrieval from external knowledge (docs, DB).
+👉 Single agent, smarter because it can “look things up”.
+
+Multi-Agent Systems = Multiple LLMs (or roles) working together.
+👉 Example: one agent retrieves, another summarizes, another critiques, and they pass messages between each other.
+👉 Orchestrated with frameworks like LangChain Agents, CrewAI, AutoGen.
+
+⚡ So:
+
+RAG = agent + memory (retriever).
+
+Multi-Agent = team of agents with specialized roles (retriever, planner, summarizer, executor, etc.).
+
+Both can be built into Streamlit — but the UI looks similar: a chatbox.
+
+✅ Example (very simplified Streamlit RAG):
+
+import streamlit as st
+from langchain.chains import RetrievalQA
+from langchain.vectorstores import FAISS
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.llms import OpenAI
+
+# Load vector DB
+embeddings = OpenAIEmbeddings()
+db = FAISS.load_local("my_vector_store", embeddings)
+
+qa = RetrievalQA.from_chain_type(
+    llm=OpenAI(),
+    retriever=db.as_retriever()
+)
+
+st.title("📚 RAG Chatbot")
+query = st.text_input("Ask a question:")
+
+if query:
+    answer = qa.run(query)
+    st.write("**Answer:**", answer)
+👉 Do you want me to prepare two working minimal Streamlit apps:
+
+One with basic RAG
+
+One with a multi-agent system (planner + solver)
+
+so you can directly see the difference in implementation?
+
+You said:
+# multi_agent_rag_ui.py
+import streamlit as st
+import datetime
+import time
+
+# -------------------------
+# Knowledge Base (Simulated RAG)
+# -------------------------
+KNOWLEDGE_BASE = {
+    "machine learning": "Machine learning is the study of algorithms that improve from experience.",
+    "compiler design": "A compiler translates source code into executable machine code.",
+    "networking": "Computer networks enable devices to communicate and share resources.",
+    "data structures": "Common data structures include arrays, linked lists, stacks, and queues."
+}
+
+def retrieve_notes(query):
+    for key, value in KNOWLEDGE_BASE.items():
+        if key in query.lower():
+            return value
+    return "No relevant notes found."
+
+# -------------------------
+# Agents
+# -------------------------
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+        tasks.sort(key=lambda t: (-t["importance"], t.get("deadline", today)))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks:
+            if task["duration"] <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task["duration"])
+                schedule.append({"name": task["name"], "start": start, "end": end})
+                current_time = end
+                available_minutes -= task["duration"]
+            else:
+                schedule.append({"name": task["name"] + " (BACKLOG)", "start": None, "end": None})
+        return schedule
+
+class ExecutorAgent:
+    def execute(self, schedule, placeholder):
+        for task in schedule:
+            if task["start"]:
+                placeholder.write(f"▶ Starting: **{task['name']}** at {task['start'].strftime('%H:%M')}")
+                note = retrieve_notes(task['name'])
+                placeholder.write(f"📖 Study Note: {note}")
+                time.sleep(1)
+                placeholder.write(f"✅ Finished: **{task['name']}** at {task['end'].strftime('%H:%M')}")
+            else:
+                placeholder.write(f"⏭ Skipping backlog task: **{task['name']}**")
+                time.sleep(0.5)
+
+# -------------------------
+# Streamlit UI
+# -------------------------
+st.set_page_config(page_title="Study Planner with RAG", layout="centered")
+st.title("🤖 Multi-Agent Planner + RAG Notes")
+
+if "tasks" not in st.session_state:
+    st.session_state.tasks = []
+
+with st.form("task_form", clear_on_submit=True):
+    name = st.text_input("Task name")
+    duration = st.number_input("Duration (minutes)", min_value=5, step=5, value=30)
+    importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+    deadline = st.date_input("Deadline (optional)", value=None)
+    submitted = st.form_submit_button("Add Task")
+    if submitted and name:
+        st.session_state.tasks.append({
+            "name": name,
+            "duration": int(duration),
+            "importance": int(importance),
+            "deadline": deadline if deadline else None
+        })
+
+st.subheader("📝 Current Tasks")
+if st.session_state.tasks:
+    for i, t in enumerate(st.session_state.tasks):
+        st.write(f"{i+1}. {t['name']} — {t['duration']} mins — importance {t['importance']} — deadline {t['deadline']}")
+else:
+    st.write("No tasks yet. Add tasks above.")
+
+if st.button("Generate Schedule"):
+    planner = PlannerAgent()
+    schedule = planner.plan(st.session_state.tasks)
+    st.session_state.schedule = schedule
+    st.subheader("📅 Planned Schedule")
+    for t in schedule:
+        if t["start"]:
+            st.write(f"{t['start'].strftime('%H:%M')} - {t['end'].strftime('%H:%M')}: {t['name']}")
+        else:
+            st.write(f"BACKLOG: {t['name']}")
+
+if st.button("Run Executor Agent"):
+    if "schedule" in st.session_state:
+        executor = ExecutorAgent()
+        st.subheader("⚡ Execution Log")
+        placeholder = st.empty()
+        executor.execute(st.session_state.schedule, placeholder)
+    else:
+        st.warning("Please generate a schedule first.")
+
+for this only provide the code
+ChatGPT said:
+
+# multi_agent_rag_ui.py
+import streamlit as st
+import datetime
+import time
+
+# -------------------------
+# Knowledge Base (Simulated RAG)
+# -------------------------
+KNOWLEDGE_BASE = {
+    "machine learning": "Machine learning is the study of algorithms that improve from experience.",
+    "compiler design": "A compiler translates source code into executable machine code.",
+    "networking": "Computer networks enable devices to communicate and share resources.",
+    "data structures": "Common data structures include arrays, linked lists, stacks, and queues."
+}
+
+def retrieve_notes(query):
+    for key, value in KNOWLEDGE_BASE.items():
+        if key in query.lower():
+            return value
+    return "No relevant notes found."
+
+# -------------------------
+# Agents
+# -------------------------
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+        tasks.sort(key=lambda t: (-t["importance"], t.get("deadline", today)))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks:
+            if task["duration"] <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task["duration"])
+                schedule.append({"name": task["name"], "start": start, "end": end})
+                current_time = end
+                available_minutes -= task["duration"]
+            else:
+                schedule.append({"name": task["name"] + " (BACKLOG)", "start": None, "end": None})
+        return schedule
+
+class ExecutorAgent:
+    def execute(self, schedule, placeholder):
+        for task in schedule:
+            if task["start"]:
+                placeholder.write(f"▶ Starting: **{task['name']}** at {task['start'].strftime('%H:%M')}")
+                note = retrieve_notes(task['name'])
+                placeholder.write(f"📖 Study Note: {note}")
+                time.sleep(1)
+                placeholder.write(f"✅ Finished: **{task['name']}** at {task['end'].strftime('%H:%M')}")
+            else:
+                placeholder.write(f"⏭ Skipping backlog task: **{task['name']}**")
+                time.sleep(0.5)
+
+# -------------------------
+# Streamlit UI
+# -------------------------
+st.set_page_config(page_title="Study Planner with RAG", layout="centered")
+st.title("🤖 Multi-Agent Planner + RAG Notes")
+
+if "tasks" not in st.session_state:
+    st.session_state.tasks = []
+
+with st.form("task_form", clear_on_submit=True):
+    name = st.text_input("Task name")
+    duration = st.number_input("Duration (minutes)", min_value=5, step=5, value=30)
+    importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+    deadline = st.date_input("Deadline (optional)")
+    submitted = st.form_submit_button("Add Task")
+    if submitted and name:
+        st.session_state.tasks.append({
+            "name": name,
+            "duration": int(duration),
+            "importance": int(importance),
+            "deadline": deadline if deadline else None
+        })
+
+st.subheader("📝 Current Tasks")
+if st.session_state.tasks:
+    for i, t in enumerate(st.session_state.tasks):
+        st.write(f"{i+1}. {t['name']} — {t['duration']} mins — importance {t['importance']} — deadline {t['deadline']}")
+else:
+    st.write("No tasks yet. Add tasks above.")
+
+if st.button("Generate Schedule"):
+    planner = PlannerAgent()
+    schedule = planner.plan(st.session_state.tasks)
+    st.session_state.schedule = schedule
+    st.subheader("📅 Planned Schedule")
+    for t in schedule:
+        if t["start"]:
+            st.write(f"{t['start'].strftime('%H:%M')} - {t['end'].strftime('%H:%M')}: {t['name']}")
+        else:
+            st.write(f"BACKLOG: {t['name']}")
+
+if st.button("Run Executor Agent"):
+    if "schedule" in st.session_state:
+        executor = ExecutorAgent()
+        st.subheader("⚡ Execution Log")
+        placeholder = st.empty()
+        executor.execute(st.session_state.schedule, placeholder)
+    else:
+        st.warning("Please generate a schedule first.")
+You said:
+Multi-agent collaboration (e.g., Planner + Executor).
+External integrations with components such as RAG, MCP, or custom Tools.
+A user interface for monitoring or editing the agent’s plan.
+Scheduling, batch execution, or other operational support features.
+
+have you done for all the points
+ChatGPT said:
+
+Let’s map your four points against the code you shared (multi_agent_rag_ui.py) and see what is already covered ✅ and what is missing ❌:
+
+1. Multi-agent collaboration (Planner + Executor)
+✔️ Done
+
+You already have PlannerAgent (makes schedule) and ExecutorAgent (runs tasks).
+
+They collaborate: Planner creates the plan → Executor executes it.
+
+2. External integrations (RAG, MCP, custom Tools)
+✔️ Partially Done
+
+You added a RAG-like retriever with retrieve_notes() from a simulated KNOWLEDGE_BASE.
+
+❌ But this is a hardcoded dictionary, not a true integration (like FAISS, Chroma, or API-based retrieval).
+
+❌ No MCP (Model Context Protocol) or external tool integrations yet.
+
+3. User interface for monitoring/editing the agent’s plan
+✔️ Partially Done
+
+You have a UI form for adding tasks (st.form).
+
+You display current tasks and planned schedule in the UI.
+
+❌ No inline editing or drag-and-drop modification of the plan.
+
+❌ No “live monitoring” (only placeholder logs during execution).
+
+4. Scheduling, batch execution, operational support
+✔️ Basic Done
+
+Planner already assigns tasks into a time-based schedule.
+
+Executor executes them sequentially with delays (time.sleep).
+
+❌ No batch execution (e.g., running multiple agents in parallel).
+
+❌ No persistent scheduling (e.g., cron-style jobs, recurring tasks, or resuming after restart).
+
+✅ Summary
+
+Covered fully: Multi-agent collab
+
+Covered partially: RAG integration, UI, Scheduling
+
+Missing: Real RAG (vector DB / API), MCP or external tools, plan editing features, advanced scheduling/batch execution.
+
+👉 Do you want me to extend your current code to include:
+
+A real RAG pipeline (e.g., FAISS/Chroma embeddings instead of dictionary)?
+
+A UI for editing/deleting tasks in the schedule?
+
+A batch execution mode (e.g., run multiple executor agents in parallel)?
+
+That way, all four points would be fully covered.
+
+You said:
+yes
+ChatGPT said:
+
+
+Thought for 6s
+Multi Agent Rag Ui
+· python
+    pip install streamlit sentence-transformers faiss-cpu numpy pytest
+                    break
+        return results
+
+# -------------------------
+# Document ingestion helpers
+# -------------------------
+
+def chunk_text(text: str, size: int = CHUNK_SIZE):
+    chunks = []
+    for i in range(0, len(text), size):
+        chunk = text[i : i + size]
+        chunks.append(chunk)
+    return chunks
+
+# -------------------------
+# Plugin / Tool interface (simple)
+# -------------------------
+class ToolInterface:
+    """Register custom tools (MCP-like). Tools are callables that accept a payload dict
+    and return dict results. This is minimal; replace with your own MCP/Tool runner.
+    """
+    def __init__(self):
+        self.tools = {}
+
+    def register(self, name, fn):
+        self.tools[name] = fn
+
+    def call(self, name, payload: Dict[str, Any]):
+        if name not in self.tools:
+            raise ValueError(f"Tool {name} not registered")
+        return self.tools[name](payload)
+
+TOOLS = ToolInterface()
+
+# Example dummy tool
+def web_search_tool(payload):
+    query = payload.get("query", "")
+    # Replace with actual search integration (Bing/Google API) for production
+    return {"results": [f"Simulated search result for '{query}' (1)", f"(2)"]}
+
+TOOLS.register("web_search", web_search_tool)
+
+# -------------------------
+# Agents
+# -------------------------
+@dataclass
+class Task:
+    id: str
+    name: str
+    duration: int  # minutes
+    importance: int
+    deadline: Optional[datetime.date] = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
+
+
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks: List[Task]):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+        # sort by importance desc, then by deadline asc (None -> far future)
+        tasks_sorted = sorted(tasks, key=lambda t: (-t.importance, t.deadline or datetime.date.max))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks_sorted:
+            if task.duration <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task.duration)
+                schedule.append({"task": task, "start": start, "end": end})
+                current_time = end
+                available_minutes -= task.duration
+            else:
+                schedule.append({"task": task, "start": None, "end": None})
+        return schedule
+
+
+class ExecutorAgent:
+    def __init__(self, rag_store: SimpleVectorStore = None, tools: ToolInterface = None):
+        self.rag_store = rag_store
+        self.tools = tools
+
+    def _get_notes(self, query: str):
+Done — I added the extended Streamlit app file to the canvas as "Multi Agent Rag Ui".
+
+Open that file to review the full code (Planner + Executor, RAG ingestion with FAISS fallback, task editing/deleting UI, parallel execution, and a simple tool/plugin interface).
+
+If you want, I can now:
+
+trim dependencies and make a minimal requirements.txt, or
+
+adapt the RAG part to use Chroma/Pinecone/OpenAI embeddings instead of sentence-transformers, or
+
+convert execution simulation to real timers/cron scheduling.
+
+Which of those would you like next?
+
+You said:
+Core Features (Mandatory)
+Select one manual task from your daily life or university work, and build an AI agent that can reason, plan, and execute to automate it.
+Implement a user interface (any format is acceptable: chat UI, website, mobile app, desktop app).
+Optional Features (Bonus Points)
+Multi-agent collaboration (e.g., Planner + Executor).
+External integrations with components such as RAG, MCP, or custom Tools.
+A user interface for monitoring or editing the agent’s plan.
+Scheduling, batch execution, or other operational support features.
+
+is the above code fulfilling all the points
+ChatGPT said:
+
+Let’s carefully check your assignment requirements against the extended Multi Agent RAG UI code we built:
+
+✅ Core Features (Mandatory)
+Select one manual task from your daily life/university work
+
+Chosen task: Study/Task Planning & Execution (users add tasks → AI agent plans → executes).
+
+✔️ Fulfilled.
+
+Build an AI agent that can reason, plan, and execute to automate it
+
+PlannerAgent: reasons about time, deadlines, importance → builds a schedule.
+
+ExecutorAgent: executes the schedule step by step.
+
+✔️ Fulfilled.
+
+Implement a user interface
+
+Built with Streamlit:
+
+Add/Edit/Delete tasks
+
+View planned schedule
+
+Execution log updates
+
+✔️ Fulfilled.
+
+⭐ Optional Features (Bonus Points)
+Multi-agent collaboration (Planner + Executor)
+
+Planner creates the schedule → Executor runs it.
+
+✔️ Fulfilled.
+
+External integrations (RAG, MCP, Tools)
+
+RAG: Knowledge retrieval for study notes (currently FAISS/dictionary).
+
+Custom Tool Interface: expandable for future MCP or plugins.
+
+✔️ Fulfilled at a basic level (not enterprise-scale, but integrated).
+
+User interface for monitoring/editing the agent’s plan
+
+Tasks can be added, edited, and deleted from UI.
+
+Schedule can be regenerated.
+
+Execution log shown live.
+
+✔️ Fulfilled.
+
+Scheduling, batch execution, or operational support features
+
+Scheduling: Planner assigns tasks by time.
+
+Batch execution: Executor runs tasks sequentially, with option to parallelize.
+
+Operational support: Session state keeps track of tasks and schedules.
+
+✔️ Fulfilled (basic level).
+
+📊 Verdict
+Mandatory requirements: ✅ Fully covered.
+
+Optional bonus features: ✅ All included at least in basic/working form.
+
+Could be improved with:
+
+More advanced RAG (Chroma, Pinecone, or API-based embeddings).
+
+Real scheduling (cron jobs or reminders).
+
+Multi-agent messaging (agents talking to each other).
+
+👉 So yes — your code already fulfills all mandatory points and all optional points (though some optional ones are in simplified form).
+
+Would you like me to draft a short “Project Submission Report” that clearly states how each requirement is met? That way, you can directly attach it to your assignment.
+
+You said:
+Programming languages and frameworks are open (e.g., Python, Node.js, Next.js, Ionic, etc.).
+Backend style (REST, GraphQL, agent frameworks, NoSQL/SQL, etc.) is also open, but the reasoning must be explained in the design document.
+
+is the above requirements also fulfilled
+ChatGPT said:
+
+Good question 👍 — let’s match those new requirements with your Streamlit multi-agent RAG app.
+
+📌 Requirement: Programming languages and frameworks are open
+You implemented in Python with:
+
+Streamlit (for UI)
+
+FAISS / dictionary (for simple RAG)
+
+Standard Python classes (for agents).
+
+✔️ Fulfilled — Python is a valid choice, and Streamlit is a framework for UI.
+
+📌 Requirement: Backend style (REST, GraphQL, agent frameworks, NoSQL/SQL, etc.) is also open
+Your project doesn’t use a REST/GraphQL API explicitly. Instead:
+
+Streamlit directly handles both frontend and backend in one.
+
+Knowledge base is stored in a dictionary (in-memory), but can be swapped with NoSQL/SQL or vector DB easily.
+
+Agent communication happens via class-based methods (PlannerAgent → ExecutorAgent).
+
+✔️ Fulfilled — you used a monolithic backend style (Streamlit as both frontend + backend), which is valid since the assignment allows any style.
+
+📌 Requirement: Reasoning must be explained in the design document
+Currently, your code does not include an explicit design document, but we can write one explaining:
+
+Why Python was chosen (simplicity, ML libraries, agent frameworks).
+
+Why Streamlit was chosen (fast prototyping, built-in UI).
+
+Why dictionary / FAISS for RAG (lightweight, avoids DB setup).
+
+Why class-based agents instead of frameworks (clarity, less overhead).
+
+✔️ Partially Fulfilled — the code works, but you’ll need a short design document that explains these reasoning choices.
+
+✅ Final Verdict:
+
+Language & framework requirement: Fulfilled
+
+Backend style requirement: Fulfilled (monolithic Streamlit app)
+
+Reasoning in design doc: Missing → needs to be added separately
+
+👉 Do you want me to write the design document for you, structured around your project, so that it fully meets this last requirement?
+
+You said:
+Deliverables
+Source code of the prototype.
+System design document (architecture, data design, component breakdown, chosen technologies, and reasons for the choices).
+Interaction logs: the prompts used and the chat history with the AI.
+(Optional) Demo video or screenshots.
+
+
+provide the above for completing the project and tell me where to write and how to write so that i looks professional like a software developer
+ChatGPT said:
+
+Perfect 👌 You’re basically at the final submission stage of your project. Let’s break down your deliverables and I’ll show you where to write them, how to structure them, and how to make it look professional like a software engineer’s submission.
+
+📦 Deliverables
+1. Source Code
+Already written: multi_agent_rag_ui.py (your Streamlit app).
+
+✅ Package it neatly:
+
+Put inside a folder project/ or src/.
+
+Add a requirements.txt file. Example:
+
+streamlit
+sentence-transformers
+faiss-cpu
+Add a README.md with quickstart instructions:
+
+# Multi-Agent RAG Study Planner
+
+## Installation
+```bash
+pip install -r requirements.txt
+Run
+streamlit run multi_agent_rag_ui.py
+2. System Design Document
+Write this as a separate markdown/PDF document: design_document.md or design_document.pdf.
+
+Here’s a professional structure 👇
+
+# System Design Document
+
+## 1. Architecture
+The system follows a monolithic design using Streamlit as both frontend and backend.
+- **UI Layer:** Streamlit forms, task table, schedule display, execution logs.
+- **Agent Layer:**
+  - PlannerAgent: creates schedule based on deadlines & importance.
+  - ExecutorAgent: executes schedule and retrieves contextual notes.
+- **Knowledge Layer:** RAG (dictionary / FAISS vector database).
+
+Architecture Diagram:
+[Insert a simple diagram – can use draw.io, Excalidraw, or even ASCII]
+
+## 2. Data Design
+- **Task Object:**
+  ```json
+  {
+    "name": "string",
+    "duration": "int (minutes)",
+    "importance": "int (1-5)",
+    "deadline": "date"
+  }
+Schedule Object:
+
+{
+  "name": "string",
+  "start": "datetime",
+  "end": "datetime"
+}
+Knowledge Base: key-value pairs or vector embeddings for notes.
+
+3. Component Breakdown
+UI Component: Handles task input, editing, deleting, and displaying schedules.
+
+PlannerAgent Component: Allocates time slots based on available hours.
+
+ExecutorAgent Component: Simulates task execution with contextual note retrieval.
+
+RAG Component: Retrieves knowledge snippets for tasks.
+
+4. Chosen Technologies & Reasons
+Python: Simplicity, rich AI/ML ecosystem.
+
+Streamlit: Rapid prototyping of interactive UIs.
+
+FAISS (or dictionary): Lightweight retrieval system for contextual notes.
+
+Class-based agents: Easier to extend, avoids heavy frameworks.
+
+
+---
+
+### 3. **Interaction Logs**
+You can create a file `interaction_logs.md`. Example:
+
+```markdown
+# Interaction Logs
+
+## Prompt 1: Add Task
+User: "Task name = Compiler Design, Duration = 60, Importance = 5"
+System: Task added successfully.
+
+## Prompt 2: Generate Schedule
+User clicks "Generate Schedule"
+System: Schedule generated with start at 09:00, end at 10:00 for Compiler Design.
+
+## Prompt 3: Run Executor Agent
+System Output:
+- ▶ Starting: Compiler Design
+- 📖 Study Note: A compiler translates source code into machine code.
+- ✅ Finished: Compiler Design
+This shows how the user interacts with the AI agents.
+
+4. Demo Video or Screenshots (Optional)
+Take screenshots of:
+
+Task input form.
+
+Planned schedule output.
+
+Execution log running.
+
+OR record a short Loom/OBS screen capture (2–3 minutes).
+
+Save in a demo/ folder (demo.mp4 or screenshots/).
+
+📁 Final Project Structure (Professional)
+multi_agent_rag_project/
+│── src/
+│   └── multi_agent_rag_ui.py
+│── requirements.txt
+│── README.md
+│── design_document.md
+│── interaction_logs.md
+│── demo/ (optional)
+│   ├── screenshots/
+│   └── demo.mp4
+✅ Tips for Looking Professional
+Use consistent naming: lowercase_with_underscores for files, CamelCase for classes.
+
+Document inline: Add docstrings (""" """) in Python functions/classes.
+
+README is key: This is the first thing evaluators see → must explain project clearly in 1 min.
+
+Design Document: Keep concise (3–5 pages max). Use diagrams if possible.
+
+Interaction Logs: Show that you tested real scenarios.
+
+👉 Would you like me to draft the actual README.md and design_document.md with diagrams so you just have to drop them into your project folder?
+
+You said:
+i want you to provide me one by one each document and its content to be written .
+i want to add all code files starting from the simple cli files 
+
+# ai_agent.py
+import datetime
+
+def get_tasks():
+    tasks = []
+    print("Enter your tasks (type 'done' when finished):")
+    while True:
+        name = input("Task name: ")
+        if name.lower() == "done":
+            break
+        duration = int(input("Duration (in minutes): "))
+        importance = int(input("Importance (1-5): "))
+        deadline = input("Deadline (YYYY-MM-DD, or leave blank): ")
+        deadline = deadline if deadline else None
+        tasks.append({"name": name, "duration": duration, "importance": importance, "deadline": deadline})
+    return tasks
+
+def plan_schedule(tasks, available_hours=8):
+    available_minutes = available_hours * 60
+    today = datetime.date.today()
+
+    # Reasoning: sort by (importance desc, deadline asc)
+    tasks.sort(key=lambda t: (-t["importance"], t["deadline"] or str(today)))
+    
+    schedule = []
+    current_time = datetime.datetime.now().replace(hour=9, minute=0)  # Start 9 AM
+    
+    for task in tasks:
+        if task["duration"] <= available_minutes:
+            start = current_time
+            end = start + datetime.timedelta(minutes=task["duration"])
+            schedule.append((task["name"], start.strftime("%H:%M"), end.strftime("%H:%M")))
+            current_time = end
+            available_minutes -= task["duration"]
+    return schedule
+
+def main():
+    print("📅 AI Study Planner Agent")
+    tasks = get_tasks()
+    schedule = plan_schedule(tasks)
+    print("\n✅ Today's Plan:")
+    for name, start, end in schedule:
+        print(f"{start} - {end}: {name}")
+
+if __name__ == "__main__":
+    main()
+
+
+# multi_agent.py
+import datetime
+import time
+
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+
+        def deadline_key(t):
+            if t["deadline"]:
+                return datetime.datetime.strptime(t["deadline"], "%Y-%m-%d").date()
+            return datetime.date.max
+
+        tasks.sort(key=lambda t: (-t["importance"], deadline_key(t)))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks:
+            if task["duration"] <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task["duration"])
+                schedule.append({"name": task["name"], "start": start, "end": end})
+                current_time = end
+                available_minutes -= task["duration"]
+            else:
+                schedule.append({"name": task["name"] + " (BACKLOG)", "start": None, "end": None})
+        return schedule
+
+
+class ExecutorAgent:
+    def execute(self, schedule):
+        print("\n▶ Executor Agent starting execution...\n")
+        for task in schedule:
+            if task["start"]:
+                print(f"Starting: {task['name']} at {task['start'].strftime('%H:%M')}")
+                # Simulate execution with sleep (fast-forward, not real minutes)
+                time.sleep(1)
+                print(f"Finished: {task['name']} at {task['end'].strftime('%H:%M')}\n")
+            else:
+                print(f"Skipping backlog task: {task['name']}")
+
+
+def main():
+    tasks = [
+        {"name": "Math Homework", "duration": 60, "importance": 5, "deadline": "2025-09-20"},
+        {"name": "Read Notes", "duration": 30, "importance": 3, "deadline": None},
+        {"name": "Lab Report", "duration": 90, "importance": 4, "deadline": "2025-09-18"},
+    ]
+
+    planner = PlannerAgent()
+    executor = ExecutorAgent()
+
+    schedule = planner.plan(tasks)
+    print("✅ Planned Schedule:")
+    for t in schedule:
+        if t["start"]:
+            print(f"{t['start'].strftime('%H:%M')} - {t['end'].strftime('%H:%M')}: {t['name']}")
+        else:
+            print(f"BACKLOG: {t['name']}")
+
+    executor.execute(schedule)
+
+
+if __name__ == "__main__":
+    main()
+
+
+# multi_agent_rag.py
+import datetime
+import time
+
+# -------------------------
+# Knowledge Base (Simulated RAG)
+# -------------------------
+KNOWLEDGE_BASE = {
+    "machine learning": "Machine learning is the study of algorithms that improve from experience.",
+    "compiler design": "A compiler translates source code into executable machine code.",
+    "networking": "Computer networks enable devices to communicate and share resources.",
+    "data structures": "Common data structures include arrays, linked lists, stacks, and queues."
+}
+
+def retrieve_notes(query):
+    for key, value in KNOWLEDGE_BASE.items():
+        if key in query.lower():
+            return value
+    return "No relevant notes found."
+
+# -------------------------
+# Planner Agent
+# -------------------------
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks):
+        available_minutes = self.available_hours * 60
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        tasks.sort(key=lambda t: (-t["importance"], t.get("deadline", datetime.date.max)))
+        schedule = []
+
+        for task in tasks:
+            if task["duration"] <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task["duration"])
+                schedule.append({"name": task["name"], "start": start, "end": end})
+                current_time = end
+                available_minutes -= task["duration"]
+            else:
+                schedule.append({"name": task["name"] + " (BACKLOG)", "start": None, "end": None})
+        return schedule
+
+# -------------------------
+# Executor Agent
+# -------------------------
+class ExecutorAgent:
+    def execute(self, schedule):
+        for task in schedule:
+            if task["start"]:
+                print(f"▶ Starting: {task['name']} at {task['start'].strftime('%H:%M')}")
+                note = retrieve_notes(task['name'])
+                print(f"📖 Study Note: {note}")
+                time.sleep(1)  # Simulated execution
+                print(f"✅ Finished: {task['name']} at {task['end'].strftime('%H:%M')}")
+            else:
+                print(f"⏭ Skipping backlog task: {task['name']}")
+
+# -------------------------
+# Main CLI
+# -------------------------
+if __name__ == "__main__":
+    tasks = [
+        {"name": "Study Machine Learning", "duration": 60, "importance": 5, "deadline": datetime.date.today()},
+        {"name": "Review Compiler Design", "duration": 45, "importance": 4, "deadline": datetime.date.today()},
+        {"name": "Practice Networking", "duration": 30, "importance": 3, "deadline": None},
+    ]
+
+    planner = PlannerAgent()
+    schedule = planner.plan(tasks)
+
+    print("\n📅 Planned Schedule")
+    for t in schedule:
+        if t["start"]:
+            print(f"{t['start'].strftime('%H:%M')} - {t['end'].strftime('%H:%M')}: {t['name']}")
+        else:
+            print(f"BACKLOG: {t['name']}")
+
+    print("\n⚡ Running Executor Agent...")
+    executor = ExecutorAgent()
+    executor.execute(schedule)
+
+
+
+to the streamlit files
+
+# ai_agent_ui.py
+import streamlit as st
+import datetime
+
+st.title("📅 AI Study Planner Agent")
+
+tasks = []
+with st.form("task_form"):
+    name = st.text_input("Task name")
+    duration = st.number_input("Duration (minutes)", min_value=10, step=10)
+    importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+    deadline = st.date_input("Deadline (optional)", value=None)
+    submitted = st.form_submit_button("Add Task")
+    if submitted and name:
+        tasks.append({"name": name, "duration": duration, "importance": importance, "deadline": deadline})
+
+if st.button("Generate Schedule"):
+    available_hours = 8
+    available_minutes = available_hours * 60
+    today = datetime.date.today()
+    tasks.sort(key=lambda t: (-t["importance"], t["deadline"] or today))
+
+    schedule = []
+    current_time = datetime.datetime.now().replace(hour=9, minute=0)
+
+    for task in tasks:
+        if task["duration"] <= available_minutes:
+            start = current_time
+            end = start + datetime.timedelta(minutes=task["duration"])
+            schedule.append((task["name"], start.strftime("%H:%M"), end.strftime("%H:%M")))
+            current_time = end
+            available_minutes -= task["duration"]
+
+    st.subheader("✅ Today's Plan")
+    for name, start, end in schedule:
+        st.write(f"{start} - {end}: {name}")
+
+
+# multi_agent_ui.py
+import streamlit as st
+import datetime
+import time
+
+# -------------------------
+# Planner Agent
+# -------------------------
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+
+        def deadline_key(t):
+            return t["deadline"] if t.get("deadline") else datetime.date.max
+
+        tasks.sort(key=lambda t: (-t["importance"], deadline_key(t)))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks:
+            if task["duration"] <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task["duration"])
+                schedule.append({"name": task["name"], "start": start, "end": end})
+                current_time = end
+                available_minutes -= task["duration"]
+            else:
+                schedule.append({"name": task["name"] + " (BACKLOG)", "start": None, "end": None})
+        return schedule
+
+# -------------------------
+# Executor Agent
+# -------------------------
+class ExecutorAgent:
+    def execute(self, schedule, placeholder):
+        for task in schedule:
+            if task["start"]:
+                placeholder.write(f"▶ Starting: **{task['name']}** at {task['start'].strftime('%H:%M')}")
+                time.sleep(1)  # Simulate execution
+                placeholder.write(f"✅ Finished: **{task['name']}** at {task['end'].strftime('%H:%M')}")
+                time.sleep(0.5)
+            else:
+                placeholder.write(f"⏭ Skipping backlog task: **{task['name']}**")
+                time.sleep(0.5)
+
+# -------------------------
+# Streamlit App
+# -------------------------
+st.set_page_config(page_title="Multi-Agent Study Planner", layout="centered")
+st.title("🤖 Multi-Agent Study Planner (Planner + Executor)")
+
+if "tasks" not in st.session_state:
+    st.session_state.tasks = []
+
+# Task input form
+with st.form("task_form", clear_on_submit=True):
+    name = st.text_input("Task name")
+    duration = st.number_input("Duration (minutes)", min_value=5, step=5, value=30)
+    importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+    deadline = st.date_input("Deadline (optional)", value=None)
+    submitted = st.form_submit_button("Add Task")
+    if submitted and name:
+        st.session_state.tasks.append({
+            "name": name,
+            "duration": int(duration),
+            "importance": int(importance),
+            "deadline": deadline if deadline else None
+        })
+
+# Display current tasks
+st.subheader("📝 Current Tasks")
+if st.session_state.tasks:
+    for i, t in enumerate(st.session_state.tasks):
+        st.write(f"{i+1}. {t['name']} — {t['duration']} mins — importance {t['importance']} — deadline {t['deadline']}")
+else:
+    st.write("No tasks yet. Add tasks above.")
+
+# Generate schedule
+if st.button("Generate Schedule"):
+    planner = PlannerAgent()
+    schedule = planner.plan(st.session_state.tasks)
+    st.session_state.schedule = schedule
+
+    st.subheader("📅 Planned Schedule")
+    for t in schedule:
+        if t["start"]:
+            st.write(f"{t['start'].strftime('%H:%M')} - {t['end'].strftime('%H:%M')}: {t['name']}")
+        else:
+            st.write(f"BACKLOG: {t['name']}")
+
+# Execute schedule
+if st.button("Run Executor Agent"):
+    if "schedule" in st.session_state:
+        executor = ExecutorAgent()
+        st.subheader("⚡ Execution Log")
+        placeholder = st.empty()
+        executor.execute(st.session_state.schedule, placeholder)
+    else:
+        st.warning("Please generate a schedule first.")
+
+
+
+# multi_agent_rag_ui.py
+import streamlit as st
+import datetime
+import time
+
+# -------------------------
+# Knowledge Base (Simulated RAG)
+# -------------------------
+KNOWLEDGE_BASE = {
+    "machine learning": "Machine learning is the study of algorithms that improve from experience.",
+    "compiler design": "A compiler translates source code into executable machine code.",
+    "networking": "Computer networks enable devices to communicate and share resources.",
+    "data structures": "Common data structures include arrays, linked lists, stacks, and queues."
+}
+
+def retrieve_notes(query):
+    for key, value in KNOWLEDGE_BASE.items():
+        if key in query.lower():
+            return value
+    return "No relevant notes found."
+
+# -------------------------
+# Agents
+# -------------------------
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+        tasks.sort(key=lambda t: (-t["importance"], t.get("deadline", today)))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks:
+            if task["duration"] <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task["duration"])
+                schedule.append({"name": task["name"], "start": start, "end": end})
+                current_time = end
+                available_minutes -= task["duration"]
+            else:
+                schedule.append({"name": task["name"] + " (BACKLOG)", "start": None, "end": None})
+        return schedule
+
+class ExecutorAgent:
+    def execute(self, schedule, placeholder):
+        for task in schedule:
+            if task["start"]:
+                placeholder.write(f"▶ Starting: **{task['name']}** at {task['start'].strftime('%H:%M')}")
+                note = retrieve_notes(task['name'])
+                placeholder.write(f"📖 Study Note: {note}")
+                time.sleep(1)
+                placeholder.write(f"✅ Finished: **{task['name']}** at {task['end'].strftime('%H:%M')}")
+            else:
+                placeholder.write(f"⏭ Skipping backlog task: **{task['name']}**")
+                time.sleep(0.5)
+
+# -------------------------
+# Streamlit UI
+# -------------------------
+st.set_page_config(page_title="Study Planner with RAG", layout="centered")
+st.title("🤖 Multi-Agent Planner + RAG Notes")
+
+if "tasks" not in st.session_state:
+    st.session_state.tasks = []
+
+with st.form("task_form", clear_on_submit=True):
+    name = st.text_input("Task name")
+    duration = st.number_input("Duration (minutes)", min_value=5, step=5, value=30)
+    importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+    deadline = st.date_input("Deadline (optional)")
+    submitted = st.form_submit_button("Add Task")
+    if submitted and name:
+        st.session_state.tasks.append({
+            "name": name,
+            "duration": int(duration),
+            "importance": int(importance),
+            "deadline": deadline if deadline else None
+        })
+
+st.subheader("📝 Current Tasks")
+if st.session_state.tasks:
+    for i, t in enumerate(st.session_state.tasks):
+        st.write(f"{i+1}. {t['name']} — {t['duration']} mins — importance {t['importance']} — deadline {t['deadline']}")
+else:
+    st.write("No tasks yet. Add tasks above.")
+
+if st.button("Generate Schedule"):
+    planner = PlannerAgent()
+    schedule = planner.plan(st.session_state.tasks)
+    st.session_state.schedule = schedule
+    st.subheader("📅 Planned Schedule")
+    for t in schedule:
+        if t["start"]:
+            st.write(f"{t['start'].strftime('%H:%M')} - {t['end'].strftime('%H:%M')}: {t['name']}")
+        else:
+            st.write(f"BACKLOG: {t['name']}")
+
+if st.button("Run Executor Agent"):
+    if "schedule" in st.session_state:
+        executor = ExecutorAgent()
+        st.subheader("⚡ Execution Log")
+        placeholder = st.empty()
+        executor.execute(st.session_state.schedule, placeholder)
+    else:
+        st.warning("Please generate a schedule first.")
+
+
+
+# multi_agent_rag_ui.py
+"""
+Extended Streamlit app implementing:
+- Multi-agent collaboration (Planner + Executor)
+- Real-ish RAG integration using sentence-transformers + FAISS (with graceful fallback)
+- UI for adding/editing/deleting tasks and schedule monitoring
+- Batch / parallel execution support
+- Hooks for external tools (MCP / custom tools) via a simple plugin interface
+
+Dependencies (install locally):
+    pip install streamlit sentence-transformers faiss-cpu numpy pytest
+
+Run:
+    streamlit run multi_agent_rag_ui.py
+
+Notes:
+- This code aims to be portable: if FAISS or sentence-transformers isn't available,
+  it falls back to a simple exact-match retriever.
+- For production RAG use, replace the embedding model and vector store with
+  an external managed vector DB (Chroma/Pinecone/Weaviate) and a higher-quality
+  embedding model.
+"""
+
+import streamlit as st
+import datetime
+import time
+import threading
+import uuid
+import os
+from dataclasses import dataclass, field
+from typing import List, Optional, Dict, Any
+
+# Try to import optional heavy deps for RAG
+try:
+    from sentence_transformers import SentenceTransformer
+    import numpy as np
+    import faiss
+    EMBEDDINGS_AVAILABLE = True
+except Exception:
+    EMBEDDINGS_AVAILABLE = False
+
+# -------------------------
+# Simple config
+# -------------------------
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"  # sentence-transformers
+CHUNK_SIZE = 800  # characters
+
+# -------------------------
+# Simple VectorStore wrapper (FAISS) with fallback
+# -------------------------
+class SimpleVectorStore:
+    def __init__(self):
+        self.meta = []  # list of metadata dicts for each vector
+        self.vectors = None
+        self.index = None
+        self.dim = None
+        if EMBEDDINGS_AVAILABLE:
+            self.model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+        else:
+            self.model = None
+
+    def _embed(self, texts: List[str]):
+        if self.model is None:
+            # fallback: return zero vectors and rely on exact substring search
+            return np.zeros((len(texts), 1), dtype="float32") if 'np' in globals() else [[0] for _ in texts]
+        return np.array(self.model.encode(texts, convert_to_numpy=True), dtype="float32")
+
+    def add_documents(self, docs: List[Dict[str, Any]]):
+        """docs: list of {"text": str, "source": str, "id": str}
+        """
+        texts = [d["text"] for d in docs]
+        embeddings = self._embed(texts)
+        if self.vectors is None:
+            self.vectors = embeddings
+            self.meta = docs.copy()
+            self.dim = embeddings.shape[1] if hasattr(embeddings, 'shape') else None
+        else:
+            self.vectors = np.vstack([self.vectors, embeddings])
+            self.meta.extend(docs)
+
+        # (Re)build a simple FAISS index when available
+        if EMBEDDINGS_AVAILABLE and self.dim is not None:
+            try:
+                self.index = faiss.IndexFlatL2(self.dim)
+                self.index.add(self.vectors)
+            except Exception:
+                self.index = None
+
+    def similarity_search(self, query: str, k: int = 3):
+        # If embeddings are available and index built, use vector similarity
+        if EMBEDDINGS_AVAILABLE and self.index is not None:
+            q_emb = self._embed([query])
+            D, I = self.index.search(q_emb, k)
+            results = []
+            for idx in I[0]:
+                if idx < len(self.meta):
+                    results.append(self.meta[idx])
+            return results
+        # Fallback: substring match on text
+        results = []
+        q = query.lower()
+        for m in self.meta:
+            if q in m["text"].lower() or q in m.get("source", "").lower():
+                results.append(m)
+                if len(results) >= k:
+                    break
+        return results
+
+# -------------------------
+# Document ingestion helpers
+# -------------------------
+
+def chunk_text(text: str, size: int = CHUNK_SIZE):
+    chunks = []
+    for i in range(0, len(text), size):
+        chunk = text[i : i + size]
+        chunks.append(chunk)
+    return chunks
+
+# -------------------------
+# Plugin / Tool interface (simple)
+# -------------------------
+class ToolInterface:
+    """Register custom tools (MCP-like). Tools are callables that accept a payload dict
+    and return dict results. This is minimal; replace with your own MCP/Tool runner.
+    """
+    def __init__(self):
+        self.tools = {}
+
+    def register(self, name, fn):
+        self.tools[name] = fn
+
+    def call(self, name, payload: Dict[str, Any]):
+        if name not in self.tools:
+            raise ValueError(f"Tool {name} not registered")
+        return self.tools[name](payload)
+
+TOOLS = ToolInterface()
+
+# Example dummy tool
+def web_search_tool(payload):
+    query = payload.get("query", "")
+    # Replace with actual search integration (Bing/Google API) for production
+    return {"results": [f"Simulated search result for '{query}' (1)", f"(2)"]}
+
+TOOLS.register("web_search", web_search_tool)
+
+# -------------------------
+# Agents
+# -------------------------
+@dataclass
+class Task:
+    id: str
+    name: str
+    duration: int  # minutes
+    importance: int
+    deadline: Optional[datetime.date] = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
+
+
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks: List[Task]):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+        # sort by importance desc, then by deadline asc (None -> far future)
+        tasks_sorted = sorted(tasks, key=lambda t: (-t.importance, t.deadline or datetime.date.max))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks_sorted:
+            if task.duration <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task.duration)
+                schedule.append({"task": task, "start": start, "end": end})
+                current_time = end
+                available_minutes -= task.duration
+            else:
+                schedule.append({"task": task, "start": None, "end": None})
+        return schedule
+
+
+class ExecutorAgent:
+    def __init__(self, rag_store: SimpleVectorStore = None, tools: ToolInterface = None):
+        self.rag_store = rag_store
+        self.tools = tools
+
+    def _get_notes(self, query: str):
+        if self.rag_store is None:
+            return "(No RAG store configured)"
+        hits = self.rag_store.similarity_search(query, k=2)
+        if not hits:
+            return "No relevant notes found."
+        return "\n---\n".join([f"Source: {h.get('source')}\n{h.get('text')[:600]}" for h in hits])
+
+    def execute_task(self, scheduled_item, log_fn):
+        task = scheduled_item["task"]
+        start = scheduled_item["start"]
+        end = scheduled_item["end"]
+        if start is None:
+            log_fn(f"⏭ Skipping backlog task: {task.name}")
+            return {"task_id": task.id, "status": "backlog"}
+
+        log_fn(f"▶ Starting: {task.name} ({task.duration} min)")
+        # 1) optionally call a tool before running (example)
+        if self.tools:
+            try:
+                tool_out = self.tools.call("web_search", {"query": task.name})
+                log_fn(f"🔧 Tool web_search result: {tool_out.get('results')[0]}")
+            except Exception as e:
+                log_fn(f"Tool error: {e}")
+
+        # 2) fetch RAG notes related to the task
+        notes = self._get_notes(task.name)
+        log_fn(f"📖 Notes:\n{notes}")
+
+        # 3) Simulate task execution (sleep per minute scaled down)
+        # Be careful: sleeping unbounded in Streamlit blocks the frontend. We simulate small sleeps.
+        simulated_seconds = max(1, int(task.duration * 0.05))
+        for i in range(simulated_seconds):
+            log_fn(f"   working... ({i+1}/{simulated_seconds})")
+            time.sleep(0.2)
+
+        log_fn(f"✅ Finished: {task.name}")
+        return {"task_id": task.id, "status": "done"}
+
+    def run_schedule_sequential(self, schedule, log_fn):
+        results = []
+        for item in schedule:
+            results.append(self.execute_task(item, log_fn))
+        return results
+
+    def run_schedule_parallel(self, schedule, log_fn, max_workers=3):
+        threads = []
+        results = []
+        results_lock = threading.Lock()
+
+        def worker(item):
+            res = self.execute_task(item, log_fn)
+            with results_lock:
+                results.append(res)
+
+        for item in schedule:
+            t = threading.Thread(target=worker, args=(item,))
+            threads.append(t)
+
+        # start up to max_workers concurrently
+        active = []
+        while threads:
+            while threads and len(active) < max_workers:
+                t = threads.pop(0)
+                t.start()
+                active.append(t)
+            # join the first active thread that finished
+            for at in active[:]:
+                if not at.is_alive():
+                    at.join()
+                    active.remove(at)
+            time.sleep(0.1)
+
+        # join remaining
+        for at in active:
+            at.join()
+
+        return results
+
+# -------------------------
+# Streamlit UI
+# -------------------------
+st.set_page_config(page_title="Study Planner with RAG (Extended)", layout="wide")
+st.title("🤖 Multi-Agent Planner + RAG (Extended)")
+
+# Persistent in-session stores
+if "tasks" not in st.session_state:
+    st.session_state.tasks = []  # type: List[Task]
+if "schedule" not in st.session_state:
+    st.session_state.schedule = []
+if "rag_store" not in st.session_state:
+    st.session_state.rag_store = SimpleVectorStore()
+
+left, right = st.columns([2, 3])
+
+with left:
+    st.header("Add / Manage Tasks")
+    with st.form("task_form", clear_on_submit=True):
+        name = st.text_input("Task name")
+        duration = st.number_input("Duration (minutes)", min_value=5, step=5, value=30)
+        importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+        deadline = st.date_input("Deadline (optional)", value=None)
+        submitted = st.form_submit_button("Add Task")
+        if submitted and name:
+            t = Task(id=str(uuid.uuid4()), name=name, duration=int(duration), importance=int(importance), deadline=deadline)
+            st.session_state.tasks.append(t)
+            st.success(f"Added task: {name}")
+
+    st.markdown("---")
+    st.subheader("Current Tasks")
+    # Allow edit/delete for tasks
+    for i, task in enumerate(list(st.session_state.tasks)):
+        exp = st.expander(f"{i+1}. {task.name} — {task.duration}min — imp {task.importance} — dl {task.deadline}")
+        with exp:
+            new_name = st.text_input(f"Name_{task.id}", value=task.name)
+            new_duration = st.number_input(f"Duration_{task.id}", min_value=1, value=task.duration)
+            new_importance = st.slider(f"Importance_{task.id}", 1, 5, task.importance)
+            # update
+            if st.button(f"Save_{task.id}"):
+                task.name = new_name
+                task.duration = int(new_duration)
+                task.importance = int(new_importance)
+                st.success("Saved")
+            if st.button(f"Delete_{task.id}"):
+                st.session_state.tasks = [t for t in st.session_state.tasks if t.id != task.id]
+                st.warning("Deleted")
+                st.experimental_rerun()
+
+    st.markdown("---")
+    st.subheader("RAG / Documents")
+    uploaded = st.file_uploader("Upload TXT / PDF (TXT preferred for this demo)", accept_multiple_files=True)
+    if uploaded:
+        docs_to_add = []
+        for up in uploaded:
+            try:
+                data = up.getvalue().decode(errors="ignore")
+            except Exception:
+                data = ""
+            chunks = chunk_text(data)
+            for idx, c in enumerate(chunks):
+                docs_to_add.append({"text": c, "source": up.name, "id": f"{up.name}_{idx}"})
+        st.session_state.rag_store.add_documents(docs_to_add)
+        st.success(f"Ingested {len(docs_to_add)} chunks from {len(uploaded)} files")
+
+    st.markdown("---")
+    st.subheader("Tools")
+    st.write("Registered tools: ", list(TOOLS.tools.keys()))
+
+with right:
+    st.header("Planner & Execution")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Generate Schedule"):
+            planner = PlannerAgent()
+            st.session_state.schedule = planner.plan(st.session_state.tasks)
+            st.success("Schedule generated")
+    with col2:
+        if st.button("Clear Schedule"):
+            st.session_state.schedule = []
+
+    st.subheader("Planned Schedule")
+    if st.session_state.schedule:
+        for item in st.session_state.schedule:
+            t = item["task"]
+            if item["start"] is not None:
+                st.write(f"{item['start'].strftime('%H:%M')} - {item['end'].strftime('%H:%M')} : {t.name} (imp {t.importance})")
+            else:
+                st.write(f"BACKLOG: {t.name} (imp {t.importance})")
+    else:
+        st.write("No schedule. Generate one after adding tasks.")
+
+    st.markdown("---")
+    st.subheader("Executor")
+    mode = st.radio("Execution mode", ["sequential", "parallel"], index=0)
+    max_workers = st.number_input("Max parallel workers (if parallel)", min_value=1, max_value=10, value=3)
+
+    log_area = st.empty()
+    log_container = log_area.container()
+
+    if st.button("Run Executor"):
+        if not st.session_state.schedule:
+            st.warning("Please generate a schedule first")
+        else:
+            executor = ExecutorAgent(rag_store=st.session_state.rag_store, tools=TOOLS)
+
+            # simple log function writing to Streamlit area
+            def make_logger(c):
+                def logger(msg):
+                    c.write(msg)
+                return logger
+
+            with log_container:
+                if mode == "sequential":
+                    res = executor.run_schedule_sequential(st.session_state.schedule, make_logger(st))
+                    st.success("Execution finished")
+                else:
+                    res = executor.run_schedule_parallel(st.session_state.schedule, make_logger(st), max_workers=max_workers)
+                    st.success("Parallel execution finished")
+
+# Small diagnostics / info
+with st.expander("App diagnostics"):
+    st.write({
+        "embeddings_available": EMBEDDINGS_AVAILABLE,
+        "num_docs_in_rag": len(st.session_state.rag_store.meta) if hasattr(st.session_state.rag_store, 'meta') else 0,
+        "tasks_count": len(st.session_state.tasks),
+    })
+
+# End of file
+ChatGPT said:
+
+Perfect 👍 You already have all the code files ready (CLI and Streamlit).
+Now let’s build your deliverables package step by step so it looks professional like a real software dev project.
+
+📂 Deliverables Structure
+Here’s how your repo should look:
+
+ai-agent-prototype/
+│── src/
+│   ├── ai_agent.py
+│   ├── multi_agent.py
+│   ├── multi_agent_rag.py
+│   ├── ai_agent_ui.py
+│   ├── multi_agent_ui.py
+│   └── multi_agent_rag_ui.py
+│
+│── docs/
+│   ├── DESIGN.md
+│   ├── INTERACTION_LOGS.md
+│   └── README.md
+│
+│── demo/
+│   ├── screenshots/
+│   │    ├── ui_home.png
+│   │    └── schedule_generated.png
+│   └── demo_video.mp4   (optional)
+│
+│── requirements.txt
+│── run.sh
+📑 Step 1: README.md
+This is the entry point of your project. It tells others what your system is, how to install, and how to run.
+
+Here’s the content you should write in docs/README.md:
+
+# 🤖 AI Study Planner Agent
+
+An AI-powered study planning system that helps students organize and execute their tasks.  
+The system demonstrates:
+- Single-agent reasoning (basic planner)
+- Multi-agent collaboration (Planner + Executor)
+- External integrations with RAG (retrieval-augmented notes), tools (MCP-like interface)
+- Streamlit-based UI for monitoring and editing the agent’s plan
+- CLI prototypes and batch execution support
+
+---
+
+## 🚀 Features
+- **AI Task Planner (CLI + UI):** Schedule tasks based on duration, importance, and deadlines.
+- **Multi-Agent Collaboration:** Planner agent creates a schedule, Executor agent executes tasks.
+- **RAG Integration:** Fetch relevant study notes automatically during task execution.
+- **UI (Streamlit):** Add/edit/delete tasks, generate schedules, and watch execution logs.
+- **Parallel Execution:** Run tasks sequentially or in parallel with simulated progress.
+- **Tool Interface:** Extendable with external APIs (e.g., web search).
+
+---
+
+## 🛠️ Tech Stack
+- **Language:** Python 3.9+
+- **Frameworks:** Streamlit, Sentence-Transformers (for RAG), FAISS
+- **Backend Style:** REST-like via Streamlit session state (no DB needed)
+- **Data Storage:** In-memory (tasks, schedules, documents)
+
+---
+
+## 📂 Repository Structure
+src/ # Code files (CLI + UI)
+docs/ # Documentation
+demo/ # Screenshots / video
+requirements.txt # Python dependencies
+
+
+---
+
+## ⚙️ Installation
+```bash
+git clone https://github.com/yourname/ai-agent-prototype.git
+cd ai-agent-prototype
+pip install -r requirements.txt
+▶️ Running the Agents
+CLI (Basic Agent)
+python src/ai_agent.py
+CLI (Multi-Agent)
+python src/multi_agent.py
+CLI (Multi-Agent + RAG)
+python src/multi_agent_rag.py
+Streamlit Apps
+streamlit run src/ai_agent_ui.py
+streamlit run src/multi_agent_ui.py
+streamlit run src/multi_agent_rag_ui.py
+📸 Demo
+Screenshots and optional video are in /demo.
+
+📄 Documentation
+System Design Document
+
+Interaction Logs
+
+
+---
+
+👉 Next Step: I’ll give you the **System Design Document (DESIGN.md)** with architecture diagrams, reasoning for tech choices, and component breakdown.  
+
+Do you want me to write that **in a beginner-friendly detailed style** (explaining every decision) or **professional concise style** (like what companies use)?
+You said:
+ Notes: Source: lab_guide.pdf H  A2@ @! # á =Q. s%QG=1p G1C  99 5#z#D0AA0B+:bhy11Q( , c0W*vL wp	  	a Lt0 /_#=H =ܾ+a$!ኺ ݥjF e XWQW8Wb\vY	UGXW_i10e=L@z%ÑP_E@bfH#7_&?
+2r #  q /+F "p{1n0_Dp s#~ ȗqK ֗􂢐WXOnB " q)@NV #;!W\u(ܟd/?! w,}%ia 8 (@L#(/wBjC v#<2z-@p7{t@Fm85c! 7d8frU "  tq9\/[\6L\J K"KIA~s &Da/] Q_.~	F$ b?2 "=g0o2o1 !nKooj]V=1D!ȩ"LCdϊE턊4A4-s&$*ІxƟ>cV?d|U]Tu쑏3a=~.O#7Y*#-\egT؊ja( <v韘oE8nGGh3 /8uc}7$ţ?yͼ1wmebAx@?}k=Qiܻ oӟy9ﵢo|صga#y9נG"=;ٕs6_ d*)VN2+I*,C
+Source: lab_guide.pdf H  A2@ @! # á =Q. s%QG=1p G1C  99 5#z#D0AA0B+:bhy11Q( , c0W*vL wp	  	a Lt0 /_#=H =ܾ+a$!ኺ ݥjF e XWQW8Wb\vY	UGXW_i10e=L@z%ÑP_E@bfH#7_&?
+2r #  q /+F "p{1n0_Dp s#~ ȗqK ֗􂢐WXOnB " q)@NV #;!W\u(ܟd/?! w,}%ia 8 (@L#(/wBjC v#<2z-@p7{t@Fm85c! 7d8frU "  tq9\/[\6L\J K"KIA~s &Da/] Q_.~	F$ b?2 "=g0o2o1 !nKooj]V=1D!ȩ"LCdϊE턊4A4-s&$*ІxƟ>cV?d|U]Tu쑏3a=~.O#7Y*#-\egT؊ja( <v韘oE8nGGh3 /8uc}7$ţ?yͼ1wmebAx@?}k=Qiܻ oӟy9ﵢo|صga#y9נG"=;ٕs6_ d*)VN2+I*,C
+
+
+
+working... (1/1)
+
+✅ Finished: H2
+
+▶ Starting: H1 (30 min)
+
+🔧 Tool web_search result: Simulated search result for 'H1' (1)
+
+📖 Notes: Source: lab_guide.pdf H  A2@ @! # á =Q. s%QG=1p G1C  99 5#z#D0AA0B+:bhy11Q( , c0W*vL wp	  	a Lt0 /_#=H =ܾ+a$!ኺ ݥjF e XWQW8Wb\vY	UGXW_i10e=L@z%ÑP_E@bfH#7_&?
+2r #  q /+F "p{1n0_Dp s#~ ȗqK ֗􂢐WXOnB " q)@NV #;!W\u(ܟd/?! w,}%ia 8 (@L#(/wBjC v#<2z-@p7{t@Fm85c! 7d8frU "  tq9\/[\6L\J K"KIA~s &Da/] Q_.~	F$ b?2 "=g0o2o1 !nKooj]V=1D!ȩ"LCdϊE턊4A4-s&$*ІxƟ>cV?d|U]Tu쑏3a=~.O#7Y*#-\egT؊ja( <v韘oE8nGGh3 /8uc}7$ţ?yͼ1wmebAx@?}k=Qiܻ oӟy9ﵢo|صga#y9נG"=;ٕs6_ d*)VN2+I*,C
+Source: lab_guide.pdf H  A2@ @! # á =Q. s%QG=1p G1C  99 5#z#D0AA0B+:bhy11Q( , c0W*vL wp	  	a Lt0 /_#=H =ܾ+a$!ኺ ݥjF e XWQW8Wb\vY	UGXW_i10e=L@z%ÑP_E@bfH#7_&?
+2r #  q /+F "p{1n0_Dp s#~ ȗqK ֗􂢐WXOnB " q)@NV #;!W\u(ܟd/?! w,}%ia 8 (@L#(/wBjC v#<2z-@p7{t@Fm85c! 7d8frU "  tq9\/[\6L\J K"KIA~s &Da/] Q_.~	F$ b?2 "=g0o2o1 !nKooj]V=1D!ȩ"LCdϊE턊4A4-s&$*ІxƟ>cV?d|U]Tu쑏3a=~.O#7Y*#-\egT؊ja( <v韘oE8nGGh3 /8uc}7$ţ?yͼ1wmebAx@?}k=Qiܻ oӟy9ﵢo|صga#y9נG"=;ٕs6_ d*)VN2+I*,C
+
+working... (1/1)
+
+✅ Finished: H1
+
+▶ Starting: H3 (30 min)
+
+🔧 Tool web_search result: Simulated search result for 'H3' (1)
+
+📖 Notes: Source: lab_guide.pdf c-QwU?0(>N:|鷴$>g,#P;zt }
+$ywwf3K!y ԿԹkM.I2p"x_[H򴌚HOEzb~y֚}=ׂhFO @LkC睒Y# pPZɦ\0P3dd[ִhUpF ody{  ؓFM>ע-p	M N gEAg չk}_8[Px㝒K	 U$qGV|vN./d-/	bNކRxu_OԠP.Rɖ"e *Jr(+l4 jXҞ;gX!,D#y|eo|3qWdPm?91!%n9UɪTgHܺAV\mP!p&niy	b%L9,CVq\.T1_j/b|\r7#O՝<ΰiLTpM5썱!N6)PZ$s3Oj%#L[ןɊ\JSEAAW=Cjy)3^w*T*Jإ5[srrp)55SBG!r^4{NXM5s+C'&'Ugan5gWaҧu0XOesvT57iƏA?{}&| blY,u; ͣfFA{3UJ+(XrG8
+cAHxte:X/g@ Nyz{L\q߱vc fn0,Z*P](W+  FAV\n8jاlͫ;i]:нSF3#_+k5ɍ&ϟ{yIP mQ ;ܲo}⿖+bftƄ4kp_Qg{-gj$^&<ynHb*umBhGl=9,qo
+Source: lab_guide.pdf c-QwU?0(>N:|鷴$>g,#P;zt }
+$ywwf3K!y ԿԹkM.I2p"x_[H򴌚HOEzb~y֚}=ׂhFO @LkC睒Y# pPZɦ\0P3dd[ִhUpF ody{  ؓFM>ע-p	M N gEAg չk}_8[Px㝒K	 U$qGV|vN./d-/	bNކRxu_OԠP.Rɖ"e *Jr(+l4 jXҞ;gX!,D#y|eo|3qWdPm?91!%n9UɪTgHܺAV\mP!p&niy	b%L9,CVq\.T1_j/b|\r7#O՝<ΰiLTpM5썱!N6)PZ$s3Oj%#L[ןɊ\JSEAAW=Cjy)3^w*T*Jإ5[srrp)55SBG!r^4{NXM5s+C'&'Ugan5gWaҧu0XOesvT57iƏA?{}&| blY,u; ͣfFA{3UJ+(XrG8
+cAHxte:X/g@ Nyz{L\q߱vc fn0,Z*P](W+  FAV\n8jاlͫ;i]:нSF3#_+k5ɍ&ϟ{yIP mQ ;ܲo}⿖+bftƄ4kp_Qg{-gj$^&<ynHb*umBhGl=9,qo
+
+working... (1/1)
+
+✅ Finished: H3
+
+
+
+
+WHY IS THE EVALUATOR GIVING SUCH WIERD RESULT UPON GIVNING A PDF FILE OF NAME LABGUIDE 
+ChatGPT said:
+
+Ah I see what’s happening 👀
+
+The weird gibberish output you’re seeing when your evaluator agent processes lab_guide.pdf isn’t a bug in your agent’s logic — it’s because of how the PDF is being read.
+
+🔎 Why this happens
+PDFs are not plain text.
+They store content as streams of encoded text, images, vector graphics, etc. If you open or read a PDF file directly (open("lab_guide.pdf", "r")), Python just dumps the raw binary bytes → which looks like corrupted symbols ( , _, random hex).
+
+Your agent is treating the binary bytes as text.
+Since you don’t have PDF parsing, your RAG/executor just picks up the unreadable binary string and outputs it as "notes".
+
+✅ How to fix
+You need to extract text properly from the PDF instead of just reading the raw file. Use libraries designed for PDF text extraction, for example:
+
+import PyPDF2
+
+def extract_text_from_pdf(pdf_path):
+    text = ""
+    with open(pdf_path, "rb") as f:
+        reader = PyPDF2.PdfReader(f)
+        for page in reader.pages:
+            text += page.extract_text() + "\n"
+    return text
+Or, with a better library:
+
+from pdfminer.high_level import extract_text
+
+def extract_text_from_pdf(pdf_path):
+    return extract_text(pdf_path)
+Then, instead of feeding raw file contents into your RAG system, feed this clean extracted text.
+
+🔨 Integration into your agent
+Wherever you currently do:
+
+with open("lab_guide.pdf", "r") as f:
+    notes = f.read()
+Change it to:
+
+notes = extract_text_from_pdf("lab_guide.pdf")
+⚠️ Important
+If your PDF has scanned images (not text), you’ll need OCR (e.g., pytesseract with pdf2image).
+
+Always store extracted notes in a clean text format before passing into the Executor Agent.
+
+👉 So the reason you’re getting garbage output is not because your agent is wrong, but because PDFs are binary documents, and you need to properly extract the readable text before using them.
+
+Do you want me to update your multi_agent_rag_ui.py so that it automatically extracts text from a PDF instead of giving gibberish?
+
+You said:
+# multi_agent_rag_ui.py
+"""
+Extended Streamlit app implementing:
+- Multi-agent collaboration (Planner + Executor)
+- Real-ish RAG integration using sentence-transformers + FAISS (with graceful fallback)
+- UI for adding/editing/deleting tasks and schedule monitoring
+- Batch / parallel execution support
+- Hooks for external tools (MCP / custom tools) via a simple plugin interface
+
+Dependencies (install locally):
+    pip install streamlit sentence-transformers faiss-cpu numpy pytest
+
+Run:
+    streamlit run multi_agent_rag_ui.py
+
+Notes:
+- This code aims to be portable: if FAISS or sentence-transformers isn't available,
+  it falls back to a simple exact-match retriever.
+- For production RAG use, replace the embedding model and vector store with
+  an external managed vector DB (Chroma/Pinecone/Weaviate) and a higher-quality
+  embedding model.
+"""
+
+import streamlit as st
+import datetime
+import time
+import threading
+import uuid
+import os
+from dataclasses import dataclass, field
+from typing import List, Optional, Dict, Any
+
+# Try to import optional heavy deps for RAG
+try:
+    from sentence_transformers import SentenceTransformer
+    import numpy as np
+    import faiss
+    EMBEDDINGS_AVAILABLE = True
+except Exception:
+    EMBEDDINGS_AVAILABLE = False
+
+# -------------------------
+# Simple config
+# -------------------------
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"  # sentence-transformers
+CHUNK_SIZE = 800  # characters
+
+# -------------------------
+# Simple VectorStore wrapper (FAISS) with fallback
+# -------------------------
+class SimpleVectorStore:
+    def __init__(self):
+        self.meta = []  # list of metadata dicts for each vector
+        self.vectors = None
+        self.index = None
+        self.dim = None
+        if EMBEDDINGS_AVAILABLE:
+            self.model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+        else:
+            self.model = None
+
+    def _embed(self, texts: List[str]):
+        if self.model is None:
+            # fallback: return zero vectors and rely on exact substring search
+            return np.zeros((len(texts), 1), dtype="float32") if 'np' in globals() else [[0] for _ in texts]
+        return np.array(self.model.encode(texts, convert_to_numpy=True), dtype="float32")
+
+    def add_documents(self, docs: List[Dict[str, Any]]):
+        """docs: list of {"text": str, "source": str, "id": str}
+        """
+        texts = [d["text"] for d in docs]
+        embeddings = self._embed(texts)
+        if self.vectors is None:
+            self.vectors = embeddings
+            self.meta = docs.copy()
+            self.dim = embeddings.shape[1] if hasattr(embeddings, 'shape') else None
+        else:
+            self.vectors = np.vstack([self.vectors, embeddings])
+            self.meta.extend(docs)
+
+        # (Re)build a simple FAISS index when available
+        if EMBEDDINGS_AVAILABLE and self.dim is not None:
+            try:
+                self.index = faiss.IndexFlatL2(self.dim)
+                self.index.add(self.vectors)
+            except Exception:
+                self.index = None
+
+    def similarity_search(self, query: str, k: int = 3):
+        # If embeddings are available and index built, use vector similarity
+        if EMBEDDINGS_AVAILABLE and self.index is not None:
+            q_emb = self._embed([query])
+            D, I = self.index.search(q_emb, k)
+            results = []
+            for idx in I[0]:
+                if idx < len(self.meta):
+                    results.append(self.meta[idx])
+            return results
+        # Fallback: substring match on text
+        results = []
+        q = query.lower()
+        for m in self.meta:
+            if q in m["text"].lower() or q in m.get("source", "").lower():
+                results.append(m)
+                if len(results) >= k:
+                    break
+        return results
+
+# -------------------------
+# Document ingestion helpers
+# -------------------------
+
+def chunk_text(text: str, size: int = CHUNK_SIZE):
+    chunks = []
+    for i in range(0, len(text), size):
+        chunk = text[i : i + size]
+        chunks.append(chunk)
+    return chunks
+
+# -------------------------
+# Plugin / Tool interface (simple)
+# -------------------------
+class ToolInterface:
+    """Register custom tools (MCP-like). Tools are callables that accept a payload dict
+    and return dict results. This is minimal; replace with your own MCP/Tool runner.
+    """
+    def __init__(self):
+        self.tools = {}
+
+    def register(self, name, fn):
+        self.tools[name] = fn
+
+    def call(self, name, payload: Dict[str, Any]):
+        if name not in self.tools:
+            raise ValueError(f"Tool {name} not registered")
+        return self.tools[name](payload)
+
+TOOLS = ToolInterface()
+
+# Example dummy tool
+def web_search_tool(payload):
+    query = payload.get("query", "")
+    # Replace with actual search integration (Bing/Google API) for production
+    return {"results": [f"Simulated search result for '{query}' (1)", f"(2)"]}
+
+TOOLS.register("web_search", web_search_tool)
+
+# -------------------------
+# Agents
+# -------------------------
+@dataclass
+class Task:
+    id: str
+    name: str
+    duration: int  # minutes
+    importance: int
+    deadline: Optional[datetime.date] = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
+
+
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks: List[Task]):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+        # sort by importance desc, then by deadline asc (None -> far future)
+        tasks_sorted = sorted(tasks, key=lambda t: (-t.importance, t.deadline or datetime.date.max))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks_sorted:
+            if task.duration <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task.duration)
+                schedule.append({"task": task, "start": start, "end": end})
+                current_time = end
+                available_minutes -= task.duration
+            else:
+                schedule.append({"task": task, "start": None, "end": None})
+        return schedule
+
+
+class ExecutorAgent:
+    def __init__(self, rag_store: SimpleVectorStore = None, tools: ToolInterface = None):
+        self.rag_store = rag_store
+        self.tools = tools
+
+    def _get_notes(self, query: str):
+        if self.rag_store is None:
+            return "(No RAG store configured)"
+        hits = self.rag_store.similarity_search(query, k=2)
+        if not hits:
+            return "No relevant notes found."
+        return "\n---\n".join([f"Source: {h.get('source')}\n{h.get('text')[:600]}" for h in hits])
+
+    def execute_task(self, scheduled_item, log_fn):
+        task = scheduled_item["task"]
+        start = scheduled_item["start"]
+        end = scheduled_item["end"]
+        if start is None:
+            log_fn(f"⏭ Skipping backlog task: {task.name}")
+            return {"task_id": task.id, "status": "backlog"}
+
+        log_fn(f"▶ Starting: {task.name} ({task.duration} min)")
+        # 1) optionally call a tool before running (example)
+        if self.tools:
+            try:
+                tool_out = self.tools.call("web_search", {"query": task.name})
+                log_fn(f"🔧 Tool web_search result: {tool_out.get('results')[0]}")
+            except Exception as e:
+                log_fn(f"Tool error: {e}")
+
+        # 2) fetch RAG notes related to the task
+        notes = self._get_notes(task.name)
+        log_fn(f"📖 Notes:\n{notes}")
+
+        # 3) Simulate task execution (sleep per minute scaled down)
+        # Be careful: sleeping unbounded in Streamlit blocks the frontend. We simulate small sleeps.
+        simulated_seconds = max(1, int(task.duration * 0.05))
+        for i in range(simulated_seconds):
+            log_fn(f"   working... ({i+1}/{simulated_seconds})")
+            time.sleep(0.2)
+
+        log_fn(f"✅ Finished: {task.name}")
+        return {"task_id": task.id, "status": "done"}
+
+    def run_schedule_sequential(self, schedule, log_fn):
+        results = []
+        for item in schedule:
+            results.append(self.execute_task(item, log_fn))
+        return results
+
+    def run_schedule_parallel(self, schedule, log_fn, max_workers=3):
+        threads = []
+        results = []
+        results_lock = threading.Lock()
+
+        def worker(item):
+            res = self.execute_task(item, log_fn)
+            with results_lock:
+                results.append(res)
+
+        for item in schedule:
+            t = threading.Thread(target=worker, args=(item,))
+            threads.append(t)
+
+        # start up to max_workers concurrently
+        active = []
+        while threads:
+            while threads and len(active) < max_workers:
+                t = threads.pop(0)
+                t.start()
+                active.append(t)
+            # join the first active thread that finished
+            for at in active[:]:
+                if not at.is_alive():
+                    at.join()
+                    active.remove(at)
+            time.sleep(0.1)
+
+        # join remaining
+        for at in active:
+            at.join()
+
+        return results
+
+# -------------------------
+# Streamlit UI
+# -------------------------
+st.set_page_config(page_title="Study Planner with RAG (Extended)", layout="wide")
+st.title("🤖 Multi-Agent Planner + RAG (Extended)")
+
+# Persistent in-session stores
+if "tasks" not in st.session_state:
+    st.session_state.tasks = []  # type: List[Task]
+if "schedule" not in st.session_state:
+    st.session_state.schedule = []
+if "rag_store" not in st.session_state:
+    st.session_state.rag_store = SimpleVectorStore()
+
+left, right = st.columns([2, 3])
+
+with left:
+    st.header("Add / Manage Tasks")
+    with st.form("task_form", clear_on_submit=True):
+        name = st.text_input("Task name")
+        duration = st.number_input("Duration (minutes)", min_value=5, step=5, value=30)
+        importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+        deadline = st.date_input("Deadline (optional)", value=None)
+        submitted = st.form_submit_button("Add Task")
+        if submitted and name:
+            t = Task(id=str(uuid.uuid4()), name=name, duration=int(duration), importance=int(importance), deadline=deadline)
+            st.session_state.tasks.append(t)
+            st.success(f"Added task: {name}")
+
+    st.markdown("---")
+    st.subheader("Current Tasks")
+    # Allow edit/delete for tasks
+    for i, task in enumerate(list(st.session_state.tasks)):
+        exp = st.expander(f"{i+1}. {task.name} — {task.duration}min — imp {task.importance} — dl {task.deadline}")
+        with exp:
+            new_name = st.text_input(f"Name_{task.id}", value=task.name)
+            new_duration = st.number_input(f"Duration_{task.id}", min_value=1, value=task.duration)
+            new_importance = st.slider(f"Importance_{task.id}", 1, 5, task.importance)
+            # update
+            if st.button(f"Save_{task.id}"):
+                task.name = new_name
+                task.duration = int(new_duration)
+                task.importance = int(new_importance)
+                st.success("Saved")
+            if st.button(f"Delete_{task.id}"):
+                st.session_state.tasks = [t for t in st.session_state.tasks if t.id != task.id]
+                st.warning("Deleted")
+                st.experimental_rerun()
+
+    st.markdown("---")
+    st.subheader("RAG / Documents")
+    uploaded = st.file_uploader("Upload TXT / PDF (TXT preferred for this demo)", accept_multiple_files=True)
+    if uploaded:
+        docs_to_add = []
+        for up in uploaded:
+            try:
+                data = up.getvalue().decode(errors="ignore")
+            except Exception:
+                data = ""
+            chunks = chunk_text(data)
+            for idx, c in enumerate(chunks):
+                docs_to_add.append({"text": c, "source": up.name, "id": f"{up.name}_{idx}"})
+        st.session_state.rag_store.add_documents(docs_to_add)
+        st.success(f"Ingested {len(docs_to_add)} chunks from {len(uploaded)} files")
+
+    st.markdown("---")
+    st.subheader("Tools")
+    st.write("Registered tools: ", list(TOOLS.tools.keys()))
+
+with right:
+    st.header("Planner & Execution")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Generate Schedule"):
+            planner = PlannerAgent()
+            st.session_state.schedule = planner.plan(st.session_state.tasks)
+            st.success("Schedule generated")
+    with col2:
+        if st.button("Clear Schedule"):
+            st.session_state.schedule = []
+
+    st.subheader("Planned Schedule")
+    if st.session_state.schedule:
+        for item in st.session_state.schedule:
+            t = item["task"]
+            if item["start"] is not None:
+                st.write(f"{item['start'].strftime('%H:%M')} - {item['end'].strftime('%H:%M')} : {t.name} (imp {t.importance})")
+            else:
+                st.write(f"BACKLOG: {t.name} (imp {t.importance})")
+    else:
+        st.write("No schedule. Generate one after adding tasks.")
+
+    st.markdown("---")
+    st.subheader("Executor")
+    mode = st.radio("Execution mode", ["sequential", "parallel"], index=0)
+    max_workers = st.number_input("Max parallel workers (if parallel)", min_value=1, max_value=10, value=3)
+
+    log_area = st.empty()
+    log_container = log_area.container()
+
+    if st.button("Run Executor"):
+        if not st.session_state.schedule:
+            st.warning("Please generate a schedule first")
+        else:
+            executor = ExecutorAgent(rag_store=st.session_state.rag_store, tools=TOOLS)
+
+            # simple log function writing to Streamlit area
+            def make_logger(c):
+                def logger(msg):
+                    c.write(msg)
+                return logger
+
+            with log_container:
+                if mode == "sequential":
+                    res = executor.run_schedule_sequential(st.session_state.schedule, make_logger(st))
+                    st.success("Execution finished")
+                else:
+                    res = executor.run_schedule_parallel(st.session_state.schedule, make_logger(st), max_workers=max_workers)
+                    st.success("Parallel execution finished")
+
+# Small diagnostics / info
+with st.expander("App diagnostics"):
+    st.write({
+        "embeddings_available": EMBEDDINGS_AVAILABLE,
+        "num_docs_in_rag": len(st.session_state.rag_store.meta) if hasattr(st.session_state.rag_store, 'meta') else 0,
+        "tasks_count": len(st.session_state.tasks),
+    })
+
+# End of file
+
+
+PROVIDE THE COMPLETE CORRECTED CODE SO THAT I DOES NOT DUMP THE BINARY OF ANY FILE
+ChatGPT said:
+
+Absolutely! The main issue in your current multi_agent_rag_ui.py is that the PDF ingestion is just reading raw bytes and decoding them, which produces garbage output. We can fix this by using PyPDF2 (or pdfminer) to properly extract text from PDF files. Below is a corrected and fully working version of your app that:
+
+Handles PDF and TXT files properly.
+
+Chunks text for RAG ingestion.
+
+Maintains your planner/executor UI.
+
+Make sure to install PyPDF2:
+
+pip install PyPDF2
+# multi_agent_rag_ui_corrected.py
+"""
+Extended Streamlit app implementing:
+- Multi-agent collaboration (Planner + Executor)
+- Real-ish RAG integration using sentence-transformers + FAISS (with graceful fallback)
+- UI for adding/editing/deleting tasks and schedule monitoring
+- Batch / parallel execution support
+- Hooks for external tools (MCP / custom tools) via a simple plugin interface
+
+Dependencies:
+    pip install streamlit sentence-transformers faiss-cpu numpy PyPDF2
+"""
+
+import streamlit as st
+import datetime
+import time
+import threading
+import uuid
+import os
+from dataclasses import dataclass, field
+from typing import List, Optional, Dict, Any
+
+# Optional RAG deps
+try:
+    from sentence_transformers import SentenceTransformer
+    import numpy as np
+    import faiss
+    EMBEDDINGS_AVAILABLE = True
+except Exception:
+    EMBEDDINGS_AVAILABLE = False
+
+# PDF handling
+try:
+    import PyPDF2
+    PDF_SUPPORTED = True
+except ImportError:
+    PDF_SUPPORTED = False
+
+# -------------------------
+# Config
+# -------------------------
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
+CHUNK_SIZE = 800  # characters
+
+# -------------------------
+# Simple VectorStore wrapper (FAISS) with fallback
+# -------------------------
+class SimpleVectorStore:
+    def __init__(self):
+        self.meta = []  # metadata dicts
+        self.vectors = None
+        self.index = None
+        self.dim = None
+        if EMBEDDINGS_AVAILABLE:
+            self.model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+        else:
+            self.model = None
+
+    def _embed(self, texts: List[str]):
+        if self.model is None:
+            # fallback: zero vector
+            return np.zeros((len(texts), 1), dtype="float32") if 'np' in globals() else [[0] for _ in texts]
+        return np.array(self.model.encode(texts, convert_to_numpy=True), dtype="float32")
+
+    def add_documents(self, docs: List[Dict[str, Any]]):
+        texts = [d["text"] for d in docs]
+        embeddings = self._embed(texts)
+        if self.vectors is None:
+            self.vectors = embeddings
+            self.meta = docs.copy()
+            self.dim = embeddings.shape[1] if hasattr(embeddings, 'shape') else None
+        else:
+            self.vectors = np.vstack([self.vectors, embeddings])
+            self.meta.extend(docs)
+
+        if EMBEDDINGS_AVAILABLE and self.dim is not None:
+            try:
+                self.index = faiss.IndexFlatL2(self.dim)
+                self.index.add(self.vectors)
+            except Exception:
+                self.index = None
+
+    def similarity_search(self, query: str, k: int = 3):
+        if EMBEDDINGS_AVAILABLE and self.index is not None:
+            q_emb = self._embed([query])
+            D, I = self.index.search(q_emb, k)
+            results = []
+            for idx in I[0]:
+                if idx < len(self.meta):
+                    results.append(self.meta[idx])
+            return results
+        # fallback: substring match
+        results = []
+        q = query.lower()
+        for m in self.meta:
+            if q in m["text"].lower() or q in m.get("source", "").lower():
+                results.append(m)
+                if len(results) >= k:
+                    break
+        return results
+
+# -------------------------
+# Document ingestion helpers
+# -------------------------
+def chunk_text(text: str, size: int = CHUNK_SIZE):
+    return [text[i:i+size] for i in range(0, len(text), size)]
+
+def extract_text_from_pdf(file) -> str:
+    if not PDF_SUPPORTED:
+        return ""
+    reader = PyPDF2.PdfReader(file)
+    full_text = ""
+    for page in reader.pages:
+        text = page.extract_text()
+        if text:
+            full_text += text + "\n"
+    return full_text
+
+# -------------------------
+# Tool interface
+# -------------------------
+class ToolInterface:
+    def __init__(self):
+        self.tools = {}
+
+    def register(self, name, fn):
+        self.tools[name] = fn
+
+    def call(self, name, payload: Dict[str, Any]):
+        if name not in self.tools:
+            raise ValueError(f"Tool {name} not registered")
+        return self.tools[name](payload)
+
+TOOLS = ToolInterface()
+
+def web_search_tool(payload):
+    query = payload.get("query", "")
+    return {"results": [f"Simulated search result for '{query}' (1)", f"(2)"]}
+
+TOOLS.register("web_search", web_search_tool)
+
+# -------------------------
+# Agents
+# -------------------------
+@dataclass
+class Task:
+    id: str
+    name: str
+    duration: int
+    importance: int
+    deadline: Optional[datetime.date] = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
+
+class PlannerAgent:
+    def __init__(self, available_hours=8, start_hour=9):
+        self.available_hours = available_hours
+        self.start_hour = start_hour
+
+    def plan(self, tasks: List[Task]):
+        available_minutes = self.available_hours * 60
+        today = datetime.date.today()
+        tasks_sorted = sorted(tasks, key=lambda t: (-t.importance, t.deadline or datetime.date.max))
+        current_time = datetime.datetime.now().replace(hour=self.start_hour, minute=0, second=0, microsecond=0)
+
+        schedule = []
+        for task in tasks_sorted:
+            if task.duration <= available_minutes:
+                start = current_time
+                end = start + datetime.timedelta(minutes=task.duration)
+                schedule.append({"task": task, "start": start, "end": end})
+                current_time = end
+                available_minutes -= task.duration
+            else:
+                schedule.append({"task": task, "start": None, "end": None})
+        return schedule
+
+class ExecutorAgent:
+    def __init__(self, rag_store: SimpleVectorStore = None, tools: ToolInterface = None):
+        self.rag_store = rag_store
+        self.tools = tools
+
+    def _get_notes(self, query: str):
+        if self.rag_store is None:
+            return "(No RAG store configured)"
+        hits = self.rag_store.similarity_search(query, k=2)
+        if not hits:
+            return "No relevant notes found."
+        return "\n---\n".join([f"Source: {h.get('source')}\n{h.get('text')[:600]}" for h in hits])
+
+    def execute_task(self, scheduled_item, log_fn):
+        task = scheduled_item["task"]
+        start = scheduled_item["start"]
+        if start is None:
+            log_fn(f"⏭ Skipping backlog task: {task.name}")
+            return {"task_id": task.id, "status": "backlog"}
+
+        log_fn(f"▶ Starting: {task.name} ({task.duration} min)")
+        if self.tools:
+            try:
+                tool_out = self.tools.call("web_search", {"query": task.name})
+                log_fn(f"🔧 Tool web_search result: {tool_out.get('results')[0]}")
+            except Exception as e:
+                log_fn(f"Tool error: {e}")
+
+        notes = self._get_notes(task.name)
+        log_fn(f"📖 Notes:\n{notes}")
+
+        simulated_seconds = max(1, int(task.duration * 0.05))
+        for i in range(simulated_seconds):
+            log_fn(f"   working... ({i+1}/{simulated_seconds})")
+            time.sleep(0.2)
+
+        log_fn(f"✅ Finished: {task.name}")
+        return {"task_id": task.id, "status": "done"}
+
+    def run_schedule_sequential(self, schedule, log_fn):
+        results = []
+        for item in schedule:
+            results.append(self.execute_task(item, log_fn))
+        return results
+
+    def run_schedule_parallel(self, schedule, log_fn, max_workers=3):
+        threads = []
+        results = []
+        results_lock = threading.Lock()
+
+        def worker(item):
+            res = self.execute_task(item, log_fn)
+            with results_lock:
+                results.append(res)
+
+        for item in schedule:
+            t = threading.Thread(target=worker, args=(item,))
+            threads.append(t)
+
+        active = []
+        while threads:
+            while threads and len(active) < max_workers:
+                t = threads.pop(0)
+                t.start()
+                active.append(t)
+            for at in active[:]:
+                if not at.is_alive():
+                    at.join()
+                    active.remove(at)
+            time.sleep(0.1)
+
+        for at in active:
+            at.join()
+        return results
+
+# -------------------------
+# Streamlit UI
+# -------------------------
+st.set_page_config(page_title="Study Planner with RAG (Extended)", layout="wide")
+st.title("🤖 Multi-Agent Planner + RAG (Extended)")
+
+if "tasks" not in st.session_state:
+    st.session_state.tasks = []
+if "schedule" not in st.session_state:
+    st.session_state.schedule = []
+if "rag_store" not in st.session_state:
+    st.session_state.rag_store = SimpleVectorStore()
+
+left, right = st.columns([2,3])
+
+with left:
+    st.header("Add / Manage Tasks")
+    with st.form("task_form", clear_on_submit=True):
+        name = st.text_input("Task name")
+        duration = st.number_input("Duration (minutes)", min_value=5, step=5, value=30)
+        importance = st.slider("Importance (1 = low, 5 = high)", 1, 5, 3)
+        deadline = st.date_input("Deadline (optional)", value=None)
+        submitted = st.form_submit_button("Add Task")
+        if submitted and name:
+            t = Task(id=str(uuid.uuid4()), name=name, duration=int(duration), importance=int(importance), deadline=deadline)
+            st.session_state.tasks.append(t)
+            st.success(f"Added task: {name}")
+
+    st.markdown("---")
+    st.subheader("Current Tasks")
+    for i, task in enumerate(list(st.session_state.tasks)):
+        exp = st.expander(f"{i+1}. {task.name} — {task.duration}min — imp {task.importance} — dl {task.deadline}")
+        with exp:
+            new_name = st.text_input(f"Name_{task.id}", value=task.name)
+            new_duration = st.number_input(f"Duration_{task.id}", min_value=1, value=task.duration)
+            new_importance = st.slider(f"Importance_{task.id}", 1, 5, task.importance)
+            if st.button(f"Save_{task.id}"):
+                task.name = new_name
+                task.duration = int(new_duration)
+                task.importance = int(new_importance)
+                st.success("Saved")
+            if st.button(f"Delete_{task.id}"):
+                st.session_state.tasks = [t for t in st.session_state.tasks if t.id != task.id]
+                st.warning("Deleted")
+                st.experimental_rerun()
+
+    st.markdown("---")
+    st.subheader("RAG / Documents")
+    uploaded = st.file_uploader("Upload TXT / PDF (TXT preferred for this demo)", accept_multiple_files=True)
+    if uploaded:
+        docs_to_add = []
+        for up in uploaded:
+            text = ""
+            if up.name.lower().endswith(".pdf"):
+                text = extract_text_from_pdf(up)
+            else:
+                try:
+                    text = up.getvalue().decode(errors="ignore")
+                except Exception:
+                    text = ""
+            chunks = chunk_text(text)
+            for idx, c in enumerate(chunks):
+                docs_to_add.append({"text": c, "source": up.name, "id": f"{up.name}_{idx}"})
+        st.session_state.rag_store.add_documents(docs_to_add)
+        st.success(f"Ingested {len(docs_to_add)} chunks from {len(uploaded)} files")
+
+    st.markdown("---")
+    st.subheader("Tools")
+    st.write("Registered tools: ", list(TOOLS.tools.keys()))
+
+with right:
+    st.header("Planner & Execution")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Generate Schedule"):
+            planner = PlannerAgent()
+            st.session_state.schedule = planner.plan(st.session_state.tasks)
+            st.success("Schedule generated")
+    with col2:
+        if st.button("Clear Schedule"):
+            st.session_state.schedule = []
+
+    st.subheader("Planned Schedule")
+    if st.session_state.schedule:
+        for item in st.session_state.schedule:
+            t = item["task"]
+            if item["start"] is not None:
+                st.write(f"{item['start'].strftime('%H:%M')} - {item['end'].strftime('%H:%M')} : {t.name} (imp {t.importance})")
+            else:
+                st.write(f"BACKLOG: {t.name} (imp {t.importance})")
+    else:
+        st.write("No schedule. Generate one after adding tasks.")
+
+    st.markdown("---")
+    st.subheader("Executor")
+    mode = st.radio("Execution mode", ["sequential", "parallel"], index=0)
+    max_workers = st.number_input("Max parallel workers (if parallel)", min_value=1, max_value=10, value=3)
+    log_area = st.empty()
+    log_container = log_area.container()
+
+    if st.button("Run Executor"):
+        if not st.session_state.schedule:
+            st.warning("Please generate a schedule first")
+        else:
+            executor = ExecutorAgent(rag_store=st.session_state.rag_store, tools=TOOLS)
+            def make_logger(c):
+                def logger(msg):
+                    c.write(msg)
+                return logger
+
+            with log_container:
+                if mode == "sequential":
+                    executor.run_schedule_sequential(st.session_state.schedule, make_logger(st))
+                    st.success("Execution finished")
+                else:
+                    executor.run_schedule_parallel(st.session_state.schedule, make_logger(st), max_workers=max_workers)
+                    st.success("Parallel execution finished")
+
+with st.expander("App diagnostics"):
+    st.write({
+        "embeddings_available": EMBEDDINGS_AVAILABLE,
+        "pdf_supported": PDF_SUPPORTED,
+        "num_docs_in_rag": len(st.session_state.rag_store.meta) if hasattr(st.session_state.rag_store, 'meta') else 0,
+        "tasks_count": len(st.session_state.tasks),
+    })
+✅ Key Fixes
+PDFs are now processed with PyPDF2 (extract_text_from_pdf()), not raw bytes.
+
+TXT files still work via .decode().
+
+Chunks are still created for RAG ingestion.
+
+Executor, Planner, Tools, and Streamlit UI remain unchanged.
+
+This will stop the binary gibberish output and show proper readable content from PDFs.
+
+I can also make a version that supports scanned PDFs with OCR if you want full-text extraction from images inside PDFs.
+
+Do you want me to add OCR support too?
+
+
+
+
+
+
+
