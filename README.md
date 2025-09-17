@@ -173,7 +173,19 @@ Include the following in your submission:
 This project is provided for academic and demonstration purposes.
 Free to use with attribution.
 
+---
 
+## 👩‍💻 About Me
+
+Hi! I'm Priyanshi Agrawal, a dual-degree student pursuing:
+
+- **BS in Data Science And Applications** from **IIT Madras** --- **INDIAN INSTITUTE OF TECHNOLOGY MADRAS** --- **DATA SCIENCE AND APPLICATIONS DEPARTMENT , BS DEGREE**
+- **B.Tech in Computer Science and Engineering** from **IIT Patna**  --- **Department of Computer Science and Engineering** --- **INDIAN INSTITUTE OF TECHNOLOGY PATNA**
+
+
+I'm passionate about building reproducible automation pipelines, agentic AI systems, and solving real-world problems through strategic planning and modular design. This repository reflects my commitment to clarity, transparency, and scalable innovation.
+
+Feel free to explore, contribute, or reach out!
 
 ---
 
